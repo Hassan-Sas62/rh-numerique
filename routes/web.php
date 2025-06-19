@@ -6,10 +6,11 @@ use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\CongeController;
 use App\Http\Controllers\PresenceController;
 
+
 Route::get('/', function () {
     return view('welcome');
-});
 
+});
 Route::get('/presences/create', [PresenceController::class, 'create'])->name('presences.create');
 Route::post('/presences', [PresenceController::class, 'store'])->name('presences.store');
 Route::get('/absents', [PresenceController::class, 'absentsDuJour'])->name('absents.jour');
